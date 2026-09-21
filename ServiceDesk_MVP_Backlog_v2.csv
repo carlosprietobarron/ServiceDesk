@@ -1,0 +1,66 @@
+﻿Order,Phase,Title,Work Type,Area,Status,Priority
+1,Foundation,Initialize Local and GitHub Repository,Task,DevOps,Done,High
+2,Foundation,Create ServiceDesk GitHub Project and Kanban Board,Task,DevOps,Ready,High
+3,Analysis,Review and Baseline MVP Functional Requirements,Task,Documentation,In Progress,High
+4,Analysis,Review Ticket Service OOA&D Model,Task,Architecture,In Progress,High
+5,Analysis,Resolve Open Ticket Domain Decisions,Task,Architecture,Backlog,High
+6,Architecture,Define ServiceDesk Architecture Baseline v0.1,Task,Architecture,Backlog,High
+7,Architecture,Create C4 System Context and Container Diagrams,Task,Architecture,Backlog,Medium
+8,Architecture,Define Service and Data Ownership Boundaries,Task,Architecture,Backlog,High
+9,Architecture,Create Initial Architecture Decision Records (ADRs),Task,Architecture,Backlog,Medium
+10,Architecture,Define Physical Solution and Project Structure,Task,Architecture,Backlog,High
+11,Dev Environment,Configure Local Development Environment,Task,DevOps,Backlog,High
+12,Dev Environment,Create ServiceDesk .NET Solution Skeleton,Task,Backend,Backlog,High
+13,Dev Environment,Create React Frontend Skeleton,Task,Frontend,Backlog,High
+14,Dev Environment,Configure PostgreSQL Development Database,Task,Database,Backlog,High
+15,Dev Environment,Create Development Docker Compose Environment,Task,DevOps,Backlog,High
+16,Dev Environment,Define Configuration and Secrets Strategy,Task,Security,Backlog,High
+17,CI,Create Initial GitHub Actions CI Pipeline,Task,DevOps,Backlog,High
+18,CI,Configure Main Branch Protection / Ruleset,Task,DevOps,Backlog,High
+19,Coding Agents,Create Repository Copilot Instructions,Task,AI,Backlog,Medium
+20,Coding Agents,Create Agent-Ready GitHub Issue Template,Task,AI,Backlog,Medium
+21,Coding Agents,Configure Coding Agent v0.1 — Issue to Pull Request,Story,AI,Backlog,Medium
+22,Identity,Create Identity Service Foundation,Story,Identity,Backlog,High
+23,Identity,Implement Users and Roles,Story,Identity,Backlog,High
+24,Identity,Implement User Authentication and JWT Generation,Story,Identity,Backlog,High
+25,Identity,Implement Authorization Policies and Current User Context,Story,Identity,Backlog,High
+26,Identity,Implement Secure Login in React,Story,Frontend,Backlog,High
+27,Ticket Domain,Implement Ticket Aggregate and Domain Invariants,Story,Backend,Backlog,High
+28,Ticket Domain,Implement Ticket Domain Unit Tests,Task,Testing,Backlog,High
+29,Persistence,Implement Ticket Persistence with EF Core,Story,Database,Backlog,High
+30,Ticket,Implement Create Ticket Vertical Slice,Story,Full Stack,Backlog,High
+31,Ticket,Implement View Ticket and My Tickets,Story,Full Stack,Backlog,High
+32,Deployment,Create Stage Environment,Task,DevOps,Backlog,Medium
+33,Deployment,Implement Continuous Deployment to Stage,Task,DevOps,Backlog,Medium
+34,Ticket,"Implement Ticket Classification, Category and Priority",Story,Full Stack,Backlog,High
+35,Ticket,Implement Ticket Assignment and Ownership,Story,Full Stack,Backlog,High
+36,Ticket,Implement Ticket Comments,Story,Full Stack,Backlog,Medium
+37,Ticket,Implement Ticket History and Audit Trail,Story,Full Stack,Backlog,High
+38,Handoff,Implement Request Handoff,Story,Full Stack,Backlog,High
+39,Handoff,Implement Handoff Information Validation,Story,Backend,Backlog,High
+40,Handoff,Implement Accept Handoff,Story,Full Stack,Backlog,High
+41,Handoff,Implement Return Handoff,Story,Full Stack,Backlog,High
+42,Handoff,Implement Redirect Handoff,Story,Full Stack,Backlog,Medium
+43,Ticket,Implement Resolve Ticket,Story,Full Stack,Backlog,High
+44,Ticket,Implement User Resolution Confirmation and Close Ticket,Story,Full Stack,Backlog,High
+45,Ticket,Implement Automatic Close after No Objection,Story,Backend,Backlog,Medium
+46,Ticket,Implement Reopen Ticket,Story,Full Stack,Backlog,High
+47,Messaging,Implement Transactional Outbox Pattern,Story,Backend,Backlog,Medium
+48,Messaging,Introduce RabbitMQ and Domain Event Publishing,Story,Backend,Backlog,Medium
+49,AI Product,Create AI Agent Service Foundation,Story,AI,Backlog,Medium
+50,AI Product,Generate AI Ticket Triage Recommendation,Story,AI,Backlog,Medium
+51,AI Product,Implement Accept / Modify / Reject AI Recommendation,Story,Full Stack,Backlog,Medium
+52,Reporting,Create Reporting Service and Event Projections,Story,Backend,Backlog,Medium
+53,Reporting,Implement Basic ServiceDesk Metrics API,Story,Backend,Backlog,Medium
+54,Reporting,Implement Metrics Dashboard,Story,Frontend,Backlog,Medium
+55,Coding Agents,Create Domain Developer Custom Agent,Story,AI,Backlog,Low
+56,Coding Agents,Create Test Engineer Custom Agent,Story,AI,Backlog,Low
+57,Coding Agents,Create Code Reviewer Custom Agent,Story,AI,Backlog,Low
+58,Coding Agents,Validate Coding Agent PR Workflow on Real ServiceDesk Issue,Task,AI,Backlog,Medium
+59,Quality,Implement End-to-End Critical Workflow Tests,Task,Testing,Backlog,High
+60,Quality,Implement Authentication and Authorization Integration Tests,Task,Testing,Backlog,High
+61,Quality,Perform MVP Security and Configuration Review,Task,Security,Backlog,High
+62,Production,Create Production Environment,Task,DevOps,Backlog,High
+63,Production,Create Production Deployment Pipeline,Task,DevOps,Backlog,High
+64,Release,Execute MVP Release Candidate Validation,Task,Testing,Backlog,High
+65,Release,Release ServiceDesk MVP v1.0.0,Task,DevOps,Backlog,High
