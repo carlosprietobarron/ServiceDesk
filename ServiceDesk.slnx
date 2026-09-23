@@ -1,2 +1,15 @@
 <Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/services/" />
+  <Folder Name="/src/services/TicketService/">
+    <Project Path="src/services/TicketService/ServiceDesk.Tickets.Api/ServiceDesk.Tickets.Api.csproj" />
+    <Project Path="src/services/TicketService/ServiceDesk.Tickets.Application/ServiceDesk.Tickets.Application.csproj" />
+    <Project Path="src/services/TicketService/ServiceDesk.Tickets.Domain/ServiceDesk.Tickets.Domain.csproj" />
+    <Project Path="src/services/TicketService/ServiceDesk.Tickets.Infrastructure/ServiceDesk.Tickets.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ServiceDesk.Tickets.Application.Tests/ServiceDesk.Tickets.Application.Tests.csproj" />
+    <Project Path="tests/ServiceDesk.Tickets.Domain.Tests/ServiceDesk.Tickets.Domain.Tests.csproj" />
+    <Project Path="tests/ServiceDesk.Tickets.IntegrationTests/ServiceDesk.Tickets.IntegrationTests.csproj" />
+  </Folder>
 </Solution>

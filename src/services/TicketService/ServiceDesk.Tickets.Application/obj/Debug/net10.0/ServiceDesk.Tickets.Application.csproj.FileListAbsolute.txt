@@ -1,0 +1,16 @@
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/bin/Debug/net10.0/ServiceDesk.Tickets.Application.deps.json
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/bin/Debug/net10.0/ServiceDesk.Tickets.Application.dll
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/bin/Debug/net10.0/ServiceDesk.Tickets.Application.pdb
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/bin/Debug/net10.0/ServiceDesk.Tickets.Domain.dll
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/bin/Debug/net10.0/ServiceDesk.Tickets.Domain.pdb
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/obj/Debug/net10.0/ServiceDesk.Tickets.Application.csproj.AssemblyReference.cache
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/obj/Debug/net10.0/ServiceDesk.Tickets.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/obj/Debug/net10.0/ServiceDesk.Tickets.Application.AssemblyInfoInputs.cache
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/obj/Debug/net10.0/ServiceDesk.Tickets.Application.AssemblyInfo.cs
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/obj/Debug/net10.0/ServiceDesk.Tickets.Application.csproj.CoreCompileInputs.cache
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/obj/Debug/net10.0/ServiceDesk.Tickets.Application.sourcelink.json
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/obj/Debug/net10.0/ServiceD.2E556E21.Up2Date
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/obj/Debug/net10.0/ServiceDesk.Tickets.Application.dll
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/obj/Debug/net10.0/refint/ServiceDesk.Tickets.Application.dll
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/obj/Debug/net10.0/ServiceDesk.Tickets.Application.pdb
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Application/obj/Debug/net10.0/ref/ServiceDesk.Tickets.Application.dll

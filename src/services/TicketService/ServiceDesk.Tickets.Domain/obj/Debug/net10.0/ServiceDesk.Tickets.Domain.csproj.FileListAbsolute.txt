@@ -1,0 +1,12 @@
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Domain/bin/Debug/net10.0/ServiceDesk.Tickets.Domain.deps.json
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Domain/bin/Debug/net10.0/ServiceDesk.Tickets.Domain.dll
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Domain/bin/Debug/net10.0/ServiceDesk.Tickets.Domain.pdb
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Domain/obj/Debug/net10.0/ServiceDesk.Tickets.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Domain/obj/Debug/net10.0/ServiceDesk.Tickets.Domain.AssemblyInfoInputs.cache
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Domain/obj/Debug/net10.0/ServiceDesk.Tickets.Domain.AssemblyInfo.cs
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Domain/obj/Debug/net10.0/ServiceDesk.Tickets.Domain.csproj.CoreCompileInputs.cache
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Domain/obj/Debug/net10.0/ServiceDesk.Tickets.Domain.sourcelink.json
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Domain/obj/Debug/net10.0/ServiceDesk.Tickets.Domain.dll
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Domain/obj/Debug/net10.0/refint/ServiceDesk.Tickets.Domain.dll
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Domain/obj/Debug/net10.0/ServiceDesk.Tickets.Domain.pdb
+/home/carlos/NETCORE/ServiceDesk/src/services/TicketService/ServiceDesk.Tickets.Domain/obj/Debug/net10.0/ref/ServiceDesk.Tickets.Domain.dll
