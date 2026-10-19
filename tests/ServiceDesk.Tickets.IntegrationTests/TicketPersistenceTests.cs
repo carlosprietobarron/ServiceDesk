@@ -14,6 +14,7 @@ public sealed class TicketPersistenceTests
     {
         var configuration = new ConfigurationBuilder()
             .AddUserSecrets("8bbb66ac-376b-4347-9082-3565f6f8c067")
+            .AddEnvironmentVariables()
             .Build();
 
         var connectionString =
