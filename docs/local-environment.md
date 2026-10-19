@@ -4,24 +4,28 @@ Este documento describe la configuración local utilizada para desarrollar el pr
 
 ## Sistema base
 
-- Sistema operativo: Ubuntu 22.04.5 LTS
-- Editor principal: Visual Studio Code
-- Shell de trabajo: Bash
-- Repositorio: Git y GitHub CLI
+El proyecto utiliza dos entornos de desarrollo.
+
+| Entorno | Herramientas |
+| --- | --- |
+| Windows 11 | Visual Studio Community 2026 y PowerShell |
+| Ubuntu 22.04.5 LTS | Visual Studio Code y Bash |
+
+PostgreSQL se ejecuta en Docker Desktop sobre Windows.
+Linux puede conectarse mediante la dirección IPv4 del equipo Windows.
 
 ## Versiones verificadas
 
-| Componente | Versión | Estado |
+| Componente | Windows, verificado el 19/10/2026 | Linux, registro anterior |
 | --- | --- | --- |
-| Git | 2.40.0 | Verificado |
-| GitHub CLI | 2.98.0 | Verificado |
-| Docker Engine | 29.6.1 | Verificado |
-| Docker Compose | 5.3.1 | Verificado |
-| .NET SDK | Por verificar | Pendiente |
-| Node.js | Por verificar | Pendiente |
-| npm | Por verificar | Pendiente |
-| Visual Studio Code | Por verificar | En uso |
-
+| Git | Por verificar | 2.40.0 |
+| GitHub CLI | Por verificar | 2.98.0 |
+| Docker | CLI 25.0.3 | Engine 29.6.1 |
+| Docker Compose | 2.24.6-desktop.1 | 5.3.1 |
+| .NET SDK | 10.0.401 | Por verificar |
+| dotnet-ef local | 10.0.4 | Restaurar desde el manifiesto |
+| Node.js | Por verificar | Por verificar |
+| npm | Por verificar | Por verificar |
 ## Git y GitHub CLI
 
 Verificar Git:
@@ -56,7 +60,7 @@ gh repo list --limit 5
 
 ## Docker
 
-Docker está instalado mediante Snap.
+Docker está instalado mediante Snap. en Linux, en windows se usara Docker desktop.
 
 Verificar la instalación:
 
@@ -132,21 +136,16 @@ dotnet --version
 dotnet --info
 ```
 
-Para secretos de desarrollo del backend se utilizará `dotnet user-secrets`.
+Los proyectos utilizan .NET 10.
 
-Inicialización:
+La cadena del backend utiliza la clave `ConnectionStrings:Tickets`.
+Se configura mediante User Secrets en ServiceDesk.Tickets.Api.
 
-```bash
-dotnet user-secrets init
-```
+El repositorio incluye `dotnet-tools.json`, que fija dotnet-ef 10.0.4.
+Restaurar la herramienta desde la raíz.
 
-Ejemplo:
-
-```bash
-dotnet user-secrets set "ConnectionStrings:DefaultConnection" "valor-local"
-```
-
-Los secretos no deben almacenarse en archivos versionados.
+```powershell
+dotnet tool restore
 
 ## Node.js y React
 
@@ -193,17 +192,16 @@ secrets.json
 | Servicio | Puerto |
 | --- | ---: |
 | React / Vite | 5173 |
-| ASP.NET Core HTTP | 5080 |
-| ASP.NET Core HTTPS | 7080 |
-| SQL Server | 1433 |
+| ASP.NET Core HTTP | 5022 |
+| ASP.NET Core HTTPS | 7238 |
+| PostgreSQL | 5432 |
 | Servicios de agentes o IA | 8000-8099 |
 | Dashboards y herramientas auxiliares | 3001-3099 |
 
 Para comprobar si los principales puertos están ocupados:
 
 ```bash
-ss -ltnp | grep -E ':5173|:5080|:7080|:1433|:8000|:8001|:3001'
-```
+ss -ltnp | grep -E ':5173|:5022|:7238|:5432|:8000|:8001|:3001'
 
 También puede comprobarse un puerto individual:
 
