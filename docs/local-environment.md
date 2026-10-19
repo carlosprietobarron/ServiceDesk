@@ -60,7 +60,8 @@ gh repo list --limit 5
 
 ## Docker
 
-Docker está instalado mediante Snap. en Linux, en windows se usara Docker desktop.
+En Linux, Docker está instalado mediante Snap. En Windows se utiliza Docker Desktop.
+Los comandos de Snap y grupos de usuarios siguientes corresponden a Linux.
 
 Verificar la instalación:
 
@@ -146,6 +147,10 @@ Restaurar la herramienta desde la raíz.
 
 ```powershell
 dotnet tool restore
+```
+
+Consultar [PostgreSQL para desarrollo](postgresql-development.md)
+para configurar secretos, aplicar migraciones y ejecutar pruebas.
 
 ## Node.js y React
 
@@ -202,6 +207,7 @@ Para comprobar si los principales puertos están ocupados:
 
 ```bash
 ss -ltnp | grep -E ':5173|:5022|:7238|:5432|:8000|:8001|:3001'
+```
 
 También puede comprobarse un puerto individual:
 
