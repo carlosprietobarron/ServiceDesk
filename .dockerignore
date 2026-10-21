@@ -1,0 +1,28 @@
+
+# Git
+.git
+.gitignore
+
+# Compilaciones .NET
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Frontend
+**/node_modules/
+**/dist/
+
+# Variables de entorno y secretos
+.env
+.env.*
+!.env.example
+**/appsettings.*.local.json
+
+# Archivos temporales
+*.log
+*.tmp
