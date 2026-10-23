@@ -1,0 +1,73 @@
+
+name: ServiceDesk CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: Build and Tests
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: servicedesk_ci
+          POSTGRES_USER: servicedesk_ci
+          POSTGRES_PASSWORD: ci_test_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U servicedesk_ci -d servicedesk_ci"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      ConnectionStrings__Tickets: "Host=localhost;Port=5432;Database=servicedesk_ci;Username=servicedesk_ci;Password=ci_test_password"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore ServiceDesk.slnx
+
+      - name: Build solution
+        run: dotnet build ServiceDesk.slnx --no-restore --configuration Release
+
+      - name: Run domain tests
+        run: dotnet test tests/ServiceDesk.Tickets.Domain.Tests/ServiceDesk.Tickets.Domain.Tests.csproj --no-build --configuration Release
+
+      - name: Run application tests
+        run: dotnet test tests/ServiceDesk.Tickets.Application.Tests/ServiceDesk.Tickets.Application.Tests.csproj --no-build --configuration Release
+
+      - name: Restore EF Core tools
+        run: dotnet tool restore
+
+      - name: Apply database migrations
+        run: >
+          dotnet ef database update
+          --project src/services/TicketService/ServiceDesk.Tickets.Infrastructure
+          --startup-project src/services/TicketService/ServiceDesk.Tickets.Api
+          --configuration Release
+          --no-build
+
+      - name: Run integration tests
+        run: >
+          dotnet test
+          tests/ServiceDesk.Tickets.IntegrationTests/ServiceDesk.Tickets.IntegrationTests.csproj
+          --no-build
+          --configuration Release
