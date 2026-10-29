@@ -1,0 +1,60 @@
+name: Coding agent task
+description: Describe a focused, testable issue suitable for GitHub Copilot coding agent.
+title: "[Agent] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This template creates an issue for human review and optional assignment to Copilot.
+        Do not include passwords, tokens, private customer data or production connection strings.
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective and expected behavior
+      description: Explain the problem and observable outcome.
+      placeholder: As a service desk analyst, I need ... so that ...
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Relevant files and existing behavior
+      description: Identify affected projects, existing patterns and constraints.
+      placeholder: src/services/TicketService/...; tests/...
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Use verifiable checkboxes.
+      placeholder: |
+        - [ ] Behavior X is implemented.
+        - [ ] Invalid input Y is rejected.
+        - [ ] Unit tests cover both cases.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation commands
+      description: Name tests/builds to run and dependencies needed.
+      value: |
+        - dotnet restore ServiceDesk.slnx
+        - dotnet build ServiceDesk.slnx --no-restore --configuration Release
+        - dotnet test tests/ServiceDesk.Tickets.Domain.Tests/ServiceDesk.Tickets.Domain.Tests.csproj --no-build --configuration Release
+        - dotnet test tests/ServiceDesk.Tickets.Application.Tests/ServiceDesk.Tickets.Application.Tests.csproj --no-build --configuration Release
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Out of scope and safeguards
+      description: Say what the agent must not change or execute.
+      value: |
+        - Do not change unrelated features or architecture.
+        - Do not use production credentials or databases.
+        - Do not merge or deploy; submit a PR for human review.
+    validations:
+      required: true
