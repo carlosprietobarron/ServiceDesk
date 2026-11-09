@@ -1,0 +1,84 @@
+name: "Agent-ready development task"
+description: "Create an actionable ServiceDesk issue for a developer or coding agent."
+title: "[Task] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for scoped implementation tasks. Read `.github/copilot-instructions.md` before changing code. Do not include credentials or private data.
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Describe the outcome in concrete terms.
+      placeholder: "Implement ... so that ..."
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and current behavior
+      description: Link relevant requirements, code, issues, or examples; distinguish existing behavior from planned features.
+      placeholder: "Today ... Relevant paths/docs ..."
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: In scope
+      description: List specific changes required for this issue.
+      placeholder: "- Add ...\n- Update ..."
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope and constraints
+      description: State exclusions, architectural boundaries, compatibility and security restrictions.
+      placeholder: "Do not change ...; follow existing .NET 10 / React / PostgreSQL conventions."
+    validations:
+      required: true
+  - type: textarea
+    id: affected
+    attributes:
+      label: Likely affected components or files
+      description: Provide starting points, not an exhaustive file list. Mark uncertain paths as tentative.
+      placeholder: "src/services/TicketService/...; tests/...; docs/..."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Add observable and testable conditions using Markdown checkboxes.
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification plan
+      description: Specify executable checks, expected results and any required test environment. Never claim checks ran unless they did.
+      placeholder: "dotnet build ...; dotnet test ...; npm run lint ...; manual check ..."
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies, blockers and open questions
+      description: Link prerequisites or explicitly write None. Agents should surface ambiguity rather than invent requirements.
+      placeholder: "Depends on #... / None"
+    validations:
+      required: true
+  - type: checkboxes
+    id: ready
+    attributes:
+      label: Readiness checklist
+      options:
+        - label: "The task has a bounded scope and independently verifiable acceptance criteria."
+          required: true
+        - label: "Relevant references are linked, and no credentials or sensitive information are included."
+          required: true
